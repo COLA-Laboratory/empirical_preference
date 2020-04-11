@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Samaritan"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/minhuiliao/Desktop/col8/knapsack81/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/minhuiliao/Desktop/col8/knapsack81/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/minhuiliao/Desktop/col8/knapsack81/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/minhuiliao/Desktop/col8/knapsack81/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/minhuiliao/Desktop/col8/knapsack81/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/minhuiliao/Desktop/col8/knapsack81/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/minhuiliao/Desktop/col8/knapsack81/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/minhuiliao/Desktop/col8/knapsack81/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/minhuiliao/Desktop/col8/knapsack81/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/minhuiliao/Desktop/col8/knapsack81/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/minhuiliao/Desktop/col8/knapsack81/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/minhuiliao/Desktop/col8/knapsack81/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/minhuiliao/Desktop/col8/knapsack81/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/minhuiliao/Desktop/col8/knapsack81/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/minhuiliao/Desktop/col8/knapsack81/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Samaritan">
+				<Option output="/home/minhuiliao/Desktop/col8/knapsack81/Samaritan" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/minhuiliao/Desktop/col8/knapsack81"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/minhuiliao/Desktop/col8/knapsack81/cmake-build-debug/Makefile&quot;  VERBOSE=1 Samaritan"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/minhuiliao/Desktop/col8/knapsack81/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/minhuiliao/Desktop/col8/knapsack81/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/minhuiliao/Desktop/col8/knapsack81/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Samaritan/fast">
+				<Option output="/home/minhuiliao/Desktop/col8/knapsack81/Samaritan" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/minhuiliao/Desktop/col8/knapsack81"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/minhuiliao/Desktop/col8/knapsack81/cmake-build-debug/Makefile&quot;  VERBOSE=1 Samaritan/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/minhuiliao/Desktop/col8/knapsack81/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/minhuiliao/Desktop/col8/knapsack81/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/minhuiliao/Desktop/col8/knapsack81/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/analyse/analyse.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/analyse/plot.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/config.txt">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/core/dominance.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/core/g_evaluate.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/core/initialization.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/core/list.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/core/memory.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/core/population.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/core/print.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/core/rand.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/core/rank_sort.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/core/utility.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/core/vector.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/externals/IWFG/iwfg.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/externals/IWFG/iwfg.h">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/externals/IWFG/read.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/externals/WFG_1.15/read.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/externals/WFG_1.15/wfg.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/externals/WFG_1.15/wfg.h">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/header/analyse.h">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/header/dominance.h">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/header/global.h">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/header/indicators.h">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/header/initialization.h">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/header/memory.h">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/header/metaheuristics.h">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/header/population.h">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/header/print.h">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/header/problems.h">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/header/rand.h">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/header/rank_sort.h">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/header/reproduction.h">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/header/selection.h">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/header/utility.h">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/header/vector.h">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/indicators/gd.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/indicators/hv.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/indicators/igd.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/main.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/metaheuristics/R-MEAD2.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/metaheuristics/Rnsga2.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/metaheuristics/gnsga2.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/metaheuristics/hype.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/metaheuristics/ibea.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/metaheuristics/moead.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/metaheuristics/moead_dra.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/metaheuristics/moead_plvf.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/metaheuristics/moead_stm.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/metaheuristics/moead_stm_dra.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/metaheuristics/nsga2.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/metaheuristics/nsga3.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/metaheuristics/pbea.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/metaheuristics/r2nsga2.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/metaheuristics/smsemoa.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/metaheuristics/spea2.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/reproduction/crossover/crossover_moead.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/reproduction/crossover/crossover_nsga2.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/reproduction/crossover/crossover_spea2.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/reproduction/crossover/crossover_steadystate.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/reproduction/crossover/differential_evolution.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/reproduction/crossover/sbx.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/reproduction/mating/moead_mating.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/reproduction/mating/tournament_selection.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/reproduction/mutation/mutation_real.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/reproduction/mutation/polymut.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/selection/hype/fill.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/selection/ibea/fitness.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/selection/ibea/ibea_selection.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/selection/moead/fitness.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/selection/moead/update.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/selection/moead/utility.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/selection/moead_stm/stm_selection.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/selection/moead_stm/utility.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/selection/nsga2/crowddist.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/selection/nsga2/fillnds.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/selection/nsga2/qsort.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/selection/smsemoa/fillnds_hv.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/selection/spea2/spea2_selection.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/testproblem/CDTLZ/C1DTLZ1.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/testproblem/CDTLZ/C1DTLZ3.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/testproblem/CDTLZ/C2DTLZ2.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/testproblem/CDTLZ/C3DTLZ1.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/testproblem/CDTLZ/C3DTLZ4.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/testproblem/DTLZ/DTLZ1.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/testproblem/DTLZ/DTLZ2.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/testproblem/DTLZ/DTLZ3.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/testproblem/DTLZ/DTLZ4.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/testproblem/DTLZ/DTLZ5.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/testproblem/DTLZ/DTLZ6.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/testproblem/DTLZ/DTLZ7.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/testproblem/UF/UF1.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/testproblem/UF/UF10.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/testproblem/UF/UF2.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/testproblem/UF/UF3.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/testproblem/UF/UF4.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/testproblem/UF/UF5.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/testproblem/UF/UF6.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/testproblem/UF/UF7.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/testproblem/UF/UF8.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/testproblem/UF/UF9.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/testproblem/WFG/WFG1.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/testproblem/WFG/WFG2.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/testproblem/WFG/WFG3.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/testproblem/WFG/WFG4.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/testproblem/WFG/WFG4x.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/testproblem/WFG/WFG5.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/testproblem/WFG/WFG6.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/testproblem/WFG/WFG7.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/testproblem/WFG/WFG8.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/testproblem/WFG/WFG9.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/testproblem/WFG/toolkit.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/testproblem/WFG/toolkit.h">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/testproblem/ZDT/ZDT1.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/testproblem/ZDT/ZDT2.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/testproblem/ZDT/ZDT3.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/testproblem/ZDT/ZDT4.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/testproblem/ZDT/ZDT6.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/testproblem/evaluation.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/testproblem/knapsack/knapsack.c">
+			<Option target="Samaritan"/>
+		</Unit>
+		<Unit filename="/home/minhuiliao/Desktop/col8/knapsack81/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
