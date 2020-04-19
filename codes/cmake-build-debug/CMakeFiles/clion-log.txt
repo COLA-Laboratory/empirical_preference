@@ -1,4 +1,0 @@
-/media/minhuiliao/69c5c28c-2695-4b95-87f4-b1bb0d1ec672/minhui/Downloads/CLion-2018.2.4/clion-2018.2.4/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/minhuiliao/Desktop/OC/codes
--- Configuring done
--- Generating done
--- Build files have been written to: /home/minhuiliao/Desktop/OC/codes/cmake-build-debug
