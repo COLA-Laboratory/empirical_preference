@@ -3,13 +3,13 @@
  *  This is the main procedures of a general EMO algorithm (generational evolution model).
  *
  * Authors:
- *  Renzhi Chen <rxc332@cs.bham.ac.uk>
+ *  Minhui Liao <minhui.liao1@gmail.com>
  *  Ke Li <k.li@exeter.ac.uk>
  *
  * Institution:
- *  Computational Optimization and Data Analytics (CODA) Group @ University of Exeter
+ *  COLA-Laboratory @ University of Exeter | http://cola-laboratory.github.io
  *
- * Copyright (c) 2017 Renzhi Chen, Ke Li
+ * Copyright (c) 2020 Minhui Liao, Ke Li
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published by
@@ -87,6 +87,7 @@ double *reference_point, *weights_obj;
 int main(int argc, char *argv[])
 {
     int i;
+
     // initialize parameter settings
     initialization_real (argc,argv);
 
@@ -103,17 +104,15 @@ int main(int argc, char *argv[])
     randomize ();
 
     /* parameter settings for preference-based methods */
+    weights_obj     = (double *) malloc (sizeof(double) * number_objective);
     reference_point = (double *) malloc (sizeof(double) * number_objective);
-//    printf ("Please input a reference point:\n"); //reference point.
-//    for (i = 0; i < number_objective; i++)
-//        scanf ( "%lf", &(reference_point[i]));
-    weights_obj = (double *) malloc (sizeof(double) * number_objective);
     for (i = 0; i < number_objective; i++)
         weights_obj[i] = 1 / (double) number_objective;  // weights_obj for different objectives
 
-    double specificity = 0.1;     // the parameter of PBEA
-    double sigma       = 0.2;       // the parameter of r-NSGA-II
-    double epsilon     = 0.01;    // the parameter of R-NSGA-II
+    double specificity = 0.1;     // parameter used in PBEA
+    double sigma       = 0.2;     // parameter used in r-NSGA-II
+    double epsilon     = 0.01;    // parameter used in R-NSGA-II
+    double radius      = 0.2;     // parameter used in R-MEAD2
 
     // run experiments
     for (run_index = run_index_begin; run_index <= run_index_end; run_index++)
@@ -122,40 +121,25 @@ int main(int argc, char *argv[])
         printf ("|\tThe %d run\t|\t", run_index);
         if (!strcmp (algorithm_name, "NSGA2"))
             NSGA2 (parent_pop, offspring_pop, mixed_pop);
-        else if(!strcmp (algorithm_name, "MOEAD"))
+        else if (!strcmp (algorithm_name, "MOEAD"))
             MOEAD (parent_pop, offspring_pop, mixed_pop);
-        else if(!strcmp (algorithm_name, "MOEAD_DRA"))
-            MOEAD_DRA (parent_pop, offspring_pop, mixed_pop);
-        else if(!strcmp (algorithm_name, "MOEAD_STM"))
-            MOEAD_STM (parent_pop, offspring_pop, mixed_pop);
-        else if(!strcmp (algorithm_name, "MOEAD_STM_DRA"))
-            MOEAD_STM_DRA (parent_pop, offspring_pop, mixed_pop);
-        else if(!strcmp (algorithm_name, "SMSEMOA"))
-            SMSEMOA (parent_pop, offspring_pop, mixed_pop);
-        else if(!strcmp (algorithm_name, "IBEA"))
+        else if (!strcmp (algorithm_name, "IBEA"))
             IBEA (parent_pop, offspring_pop, mixed_pop);
-        else if(!strcmp (algorithm_name, "HYPE"))
-            HypE (parent_pop, offspring_pop, mixed_pop);
-        else if(!strcmp (algorithm_name, "NSGA3"))
+        else if (!strcmp (algorithm_name, "NSGA3"))
             NSGA3 (parent_pop, offspring_pop, mixed_pop);
-        else if(!strcmp (algorithm_name, "SPEA2"))
-            SPEA2 (parent_pop, offspring_pop, mixed_pop);
-        else if(!strcmp (algorithm_name, "rNSGA2"))
+        else if (!strcmp(algorithm_name, "RMEAD2"))
+            RMEAD2 (parent_pop, offspring_pop, mixed_pop, reference_point, radius);
+        else if (!strcmp (algorithm_name, "rNSGA2"))
             r2NSGA2 (parent_pop, offspring_pop, mixed_pop, sigma);
-        else if(!strcmp (algorithm_name, "gNSGA2"))
+        else if (!strcmp (algorithm_name, "gNSGA2"))
             gNSGA2 (parent_pop, offspring_pop, mixed_pop);
-        else if(!strcmp (algorithm_name, "RNSGA2"))
+        else if (!strcmp (algorithm_name, "RNSGA2"))
             RNSGA2 (parent_pop, offspring_pop, mixed_pop, reference_point, weights_obj, epsilon);
-        else if(!strcmp (algorithm_name, "RNSGA2GEN"))
-        {
-
-            RNSGA2GEN (parent_pop, offspring_pop, mixed_pop, reference_point, weights_obj, epsilon);
-
-        }
-
-        else if(!strcmp (algorithm_name, "PBEA"))
+        else if (!strcmp (algorithm_name, "PBEA"))
             PBEA (parent_pop, offspring_pop, mixed_pop, reference_point, weights_obj, specificity);
-        else if(!strcmp (algorithm_name, "PBEAGEN"))
+        else if (!strcmp (algorithm_name, "RNSGA2GEN"))
+            RNSGA2GEN (parent_pop, offspring_pop, mixed_pop, reference_point, weights_obj, epsilon);
+        else if (!strcmp (algorithm_name, "PBEAGEN"))
             PBEAGEN (parent_pop, offspring_pop, mixed_pop, reference_point, weights_obj, specificity);
         else
             print_error (1, 2, "UNKNOWN algorithm:", algorithm_name);

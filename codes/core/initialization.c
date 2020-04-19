@@ -3,13 +3,13 @@
  *  This file contains the functions to perform initialization operations, mostly for reading parameters.
  *
  * Authors:
- *  Renzhi Chen <rxc332@cs.bham.ac.uk>
+ *  Minhui Liao <minhui.liao1@gmail.com>
  *  Ke Li <k.li@exeter.ac.uk>
  *
  * Institution:
- *  Computational Optimization and Data Analytics (CODA) Group @ University of Exeter
+ *  COLA-Laboraotry @ University of Exeter
  *
- * Copyright (c) 2017 Renzhi Chen, Ke Li
+ * Copyright (c) 2020 Minhui Liao, Ke Li
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published by
@@ -44,8 +44,7 @@ int initialization_real (int argc, char** argv)
     FILE *config = NULL;
 
     int flag_default = 1;
-
-    weight_file = NULL;
+    weight_file      = NULL;
 
     if (argc == 1)
     {

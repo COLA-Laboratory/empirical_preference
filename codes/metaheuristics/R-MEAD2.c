@@ -6,17 +6,15 @@
  *  many-objective optimiza-tion. In Evolutionary Computation (CEC), 2014 IEEE Congress on, pages 421–428. IEEE, 2014.
  *
  * Authors:
- *  Joe Billingsley <jb931@exeter.ac.uk>
- *  Renzhi Chen <rxc332@cs.bham.ac.uk>
+ *  Minhui Liao <minhui.liao1gmail.com>
  *  Ke Li <k.li@exeter.ac.uk>
  *
  * Institution:
- *  Computational Optimization and Data Analytics (CODA) Group @ University of Exeter
+ *  COLA-Laboratory @ University of Exeter | http://cola-laboratory.github.io
  *
- * Copyright (c) 2017 Renzhi Chen, Ke Li
+ * Copyright (c) 2020 Minhui Liao, Ke Li
  *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU Lesser General Public License as published by
+ * This program is free software: you can redistribute it and/or modify * it under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *

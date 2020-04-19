@@ -39,30 +39,19 @@ set(SOURCE_FILES
         metaheuristics/R-MEAD2.c
         metaheuristics/nsga2.c
         metaheuristics/moead.c
-        metaheuristics/moead_dra.c
-        metaheuristics/moead_stm.c
-        metaheuristics/moead_stm_dra.c
-        metaheuristics/smsemoa.c
-        metaheuristics/spea2.c
         metaheuristics/ibea.c
-        metaheuristics/hype.c
         metaheuristics/nsga3.c
         metaheuristics/rnsga2.c
         metaheuristics/rnsga2General.c
 
         selection/ibea/fitness.c
         selection/ibea/ibea_selection.c
-        selection/moead/fitness.c
         selection/nsga2/crowddist.c
         selection/nsga2/fillnds.c
         selection/nsga2/qsort.c
         selection/moead/update.c
         selection/moead/utility.c
-        selection/moead_stm/stm_selection.c
-        selection/moead_stm/utility.c
-        selection/smsemoa/fillnds_hv.c
-        selection/hype/fill.c
-        selection/spea2/spea2_selection.c
+        selection/moead/fitness.c
 
         reproduction/crossover/crossover_moead.c
         reproduction/crossover/crossover_nsga2.c
