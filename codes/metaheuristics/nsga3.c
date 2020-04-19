@@ -11,7 +11,7 @@
  *  Ke Li <k.li@exeter.ac.uk>
  *
  * Institution:
- *  Computational Optimization and Data Analytics (CODA) Group @ University of Exeter
+ *  COLA-Laboratory @ University of Exeter | http://cola-laboratory.github.io
  *
  * Copyright (c) 2017 Renzhi Chen, Ke Li
  *
@@ -568,8 +568,6 @@ void NSGA3 (population_real *parent_pop, population_real *offspring_pop, populat
     int generation;
 
     initialize_uniform_weight ();
-    //read_uniform_weight("1.dat");
-    // for assign_rank
     fronts      = (list **) malloc (2 * popsize * sizeof(list *));
     fronts_size = (int *) malloc (2 * popsize * sizeof(int));;
     for (i = 0; i < 2 * popsize; i++)

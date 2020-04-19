@@ -1,18 +1,20 @@
 /*
  * Rnsga2.c:
- *  This file implements the main procedures of general EMO with using RNSGA-II as a general-purpose optimiser. It is based on the following reference:
+ *  This file implements the main procedures of general EMO with using R-NSGA-II as a general-purpose optimiser. It is based on the following reference:
  *
  *  K. Deb and J. Sundar. Reference point based multi-objective optimization using evolutionary algorithms. In
  *  Proceedings of the 8th annual conference on Genetic and evolutionary computation, pages 635–642. ACM, 2006.
  *
+ *  Note that this R-NSGA-II has been slightly modified to approximate the entire PF.
+ *
  * Authors:
- *  Minhui Liao <>
+ *  Minhui Liao <minhui.liao1@gmail.com>
  *  Ke Li <k.li@exeter.ac.uk>
  *
  * Institution:
- *  Computational Optimization for Learning and Adaptive System (COLA) Laboratory @ University of Exeter
+ *  COLA-Laboratory @ University of Exeter | http://cola-laboratory.github.io
  *
- * Copyright (c) 2018 Minhui Liao, Ke Li
+ * Copyright (c) 2020 Minhui Liao, Ke Li
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published by
@@ -29,11 +31,10 @@
  */
 
 # include "../header/metaheuristics.h"
-#include "../header/global.h"
 
-void RNSGA2GEN(population_real *parent_pop, population_real *offspring_pop, population_real *mixed_pop, double* reference_point, double* weights_obj, double epsilon)
+void RNSGA2GEN (population_real *parent_pop, population_real *offspring_pop, population_real *mixed_pop, double* reference_point, double* weights_obj, double epsilon)
 {
-    int generation,i,j;
+    int i, generation;
 
     generation       = 1;
     evaluation_count = 0;

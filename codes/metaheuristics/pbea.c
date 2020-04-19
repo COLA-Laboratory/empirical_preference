@@ -6,13 +6,13 @@
  *  Evol. Comput., 17(3):411–436, 2009.
  *
  * Authors:
- *  Minhui Liao <>
+ *  Minhui Liao <minhui.liao1@gmail.com>
  *  Ke Li <k.li@exeter.ac.uk>
  *
  * Institution:
- *  Computational Optimization for Learning and Adaptive System (COLA) Laboratory @ University of Exeter
+ *  COLA-Laboratory @ University of Exeter | http://cola-laboratory.github.io
  *
- * Copyright (c) 2018 Minhui Liao, Ke Li
+ * Copyright (c) 2020 Minhui Liao, Ke Li
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published by

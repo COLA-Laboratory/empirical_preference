@@ -10,7 +10,7 @@
  *  Ke Li <k.li@exeter.ac.uk>
  *
  * Institution:
- *  Computational Optimization and Data Analytics (CODA) Group @ University of Exeter
+ *  COLA-Laboratory @ University of Exeter | http://cola-laboratory.github.io
  *
  * Copyright (c) 2017 Renzhi Chen, Ke Li
  *

@@ -5,14 +5,16 @@
  *  L. Thiele et al., "A Preference-based Evolutionary Algorithm for Multi-objective Optimization.
  *  Evol. Comput., 17(3):411–436, 2009.
  *
+ *  Note that this PBEA is slightly modified to approximate the entire PF rather than a small fraction.
+ *
  * Authors:
- *  Minhui Liao <>
+ *  Minhui Liao <minhui.liao1@gmail.com>
  *  Ke Li <k.li@exeter.ac.uk>
  *
  * Institution:
- *  Computational Optimization for Learning and Adaptive System (COLA) Laboratory @ University of Exeter
+ *  COLA-Laboratory @ University of Exeter | http://cola-laboratory.github.io
  *
- * Copyright (c) 2018 Minhui Liao, Ke Li
+ * Copyright (c) 2020 Minhui Liao, Ke Li
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published by
@@ -32,23 +34,23 @@
 
 void PBEAGEN (population_real *parent_pop, population_real *offspring_pop, population_real *mixed_pop, double *reference_point, double *weights, double specificity)
 {
-    int i,j;
+    int i;
     int generation;
     int *flag;
     double **Indicator_value;
+
     nadir_point = (double *) malloc (number_objective * sizeof(double));
     ideal_point = (double *) malloc (number_objective * sizeof(double));
-    for(i=0;i < number_objective;i++)
-        nadir_point[i]=-INF;
-    for(i=0;i < number_objective;i++)
-        ideal_point[i]=INF;
+    for (i = 0; i < number_objective; i++)
+        nadir_point[i] = -INF;
+    for (i = 0; i < number_objective; i++)
+        ideal_point[i] = INF;
     generation       = 1;
     evaluation_count = 0;
     printf ("Progress: 1%%");
 
+    // initialization
     initialize_uniform_weight ();
-    //read_uniform_weight("1.dat");
-    // initialize population
     initialize_population_real (parent_pop);
     evaluate_population (parent_pop);
 
@@ -71,10 +73,10 @@ void PBEAGEN (population_real *parent_pop, population_real *offspring_pop, popul
 
         // environmental selection
         merge (parent_pop, offspring_pop, mixed_pop);
-        for(i=0;i < 2*popsize;i++)
-            update_ideal_point(&(mixed_pop->ind[i]));
-        for(i=0;i < 2*popsize;i++)
-            update_nadir_point(&(mixed_pop->ind[i]));
+        for (i = 0; i < 2 * popsize;  i++)
+            update_ideal_point (&(mixed_pop->ind[i]));
+        for (i = 0; i < 2 * popsize; i++)
+            update_nadir_point (&(mixed_pop->ind[i]));
         pbeaGeneral_selection (mixed_pop, parent_pop, flag, Indicator_value, weights, lambda, specificity);
 
         // track the current evolutionary progress, including population and metrics
@@ -89,6 +91,7 @@ void PBEAGEN (population_real *parent_pop, population_real *offspring_pop, popul
     for (i = 0; i < number_weight; i++)
         free (lambda[i]);
     free (lambda);
-    lambda       = NULL;
+    lambda = NULL;
+
     return;
 }
