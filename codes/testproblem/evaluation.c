@@ -57,10 +57,10 @@ void evaluate_individual (individual_real *ind)
     (strcmp (problem_name, "mDTLZ2") != 0)? :(mdtlz2 (ind), flag = 1);
     (strcmp (problem_name, "mDTLZ3") != 0)? :(mdtlz3 (ind), flag = 1);
     (strcmp (problem_name, "mDTLZ4") != 0)? :(mdtlz4 (ind), flag = 1);
-    (strcmp (problem_name, "minusDTLZ1") != 0)? :(minusdtlz1 (ind), flag = 1);
-    (strcmp (problem_name, "minusDTLZ2") != 0)? :(minusdtlz2 (ind), flag = 1);
-    (strcmp (problem_name, "minusDTLZ3") != 0)? :(minusdtlz3 (ind), flag = 1);
-    (strcmp (problem_name, "minusDTLZ4") != 0)? :(minusdtlz4 (ind), flag = 1);
+    (strcmp (problem_name, "minusDTLZ1") != 0)? :(minus_dtlz1 (ind), flag = 1);
+    (strcmp (problem_name, "minusDTLZ2") != 0)? :(minus_dtlz2 (ind), flag = 1);
+    (strcmp (problem_name, "minusDTLZ3") != 0)? :(minus_dtlz3 (ind), flag = 1);
+    (strcmp (problem_name, "minusDTLZ4") != 0)? :(minus_dtlz4 (ind), flag = 1);
     (strcmp (problem_name, "UF1") != 0)? :(uf1 (ind), flag = 1);
     (strcmp (problem_name, "UF2") != 0)? :(uf2 (ind), flag = 1);
     (strcmp (problem_name, "UF3") != 0)? :(uf3 (ind), flag = 1);

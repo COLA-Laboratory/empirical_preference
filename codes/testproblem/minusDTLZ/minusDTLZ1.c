@@ -2,10 +2,13 @@
  * minusDTLZ1.c
  *
  * Authors:
- *  Renzhi Chen <rxc332@cs.bham.ac.uk>
+ *  Minhui Liao <minhui.liao1@gmail.com>
  *  Ke Li <k.li@exeter.ac.uk>
  *
- * Copyright (c) 2017 Renzhi Chen, Ke Li
+ * Institution:
+ *  COLA-Laboratory @ University of Exeter | http://cola-laboratory.github.io
+ *
+ * Copyright (c) 2020 Minhui Liao, Ke Li
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published by
@@ -23,7 +26,7 @@
 
 #include "../../header/problems.h"
 
-void minusdtlz1 (individual_real *ind)
+void minus_dtlz1 (individual_real *ind)
 {
     int i, j, k;
     int aux;
@@ -35,7 +38,7 @@ void minusdtlz1 (individual_real *ind)
 
     gx = 0.0;
     k  = number_variable - number_objective + 1;
-    for(i = number_variable - k; i < number_variable; i++)
+    for (i = number_variable - k; i < number_variable; i++)
         gx += pow((xreal[i] - 0.5), 2.0) - cos(20.0 * PI * (xreal[i] - 0.5));
     gx = 100.0 * (k + gx);
 
@@ -51,6 +54,8 @@ void minusdtlz1 (individual_real *ind)
             aux     = number_objective - (i + 1);
             obj[i] *= 1 - xreal[aux];
         }
-	obj[i] *= (-1);
+	    obj[i] *= (-1);
     }
+
+    return;
 }
