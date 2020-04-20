@@ -1,8 +1,8 @@
 /*
- * DTLZ3.c
+ * knapsack.c
  *
  * Authors:
- *  Renzhi Chen <rxc332@cs.bham.ac.uk>
+ *  Minhui Liao <minhui.liao1@gmail.com>
  *  Ke Li <k.li@exeter.ac.uk>
  *
  * Copyright (c) 2017 Renzhi Chen, Ke Li
@@ -22,38 +22,51 @@
  */
 
 #include "../../header/problems.h"
+# include "../../header/rand.h"
 
-void dtlz3 (individual_real *ind)
+int **p_nap,**w_nap,*capa,**qtemp;
+void knapsack (individual_real *ind)
 {
     int i, j, k;
-    int aux;
-    double gx;
-    double *xreal, *obj;
 
+    double *xreal, *obj;
     obj   = ind->obj;
     xreal = ind->xreal;
 
-    gx = 0.0;
-    k  = number_variable - number_objective + 1;
-    for(i = number_variable - k; i < number_variable; i++)
-        gx += pow((xreal[i] - 0.5), 2.0) - cos(20.0 * PI * (xreal[i] - 0.5));
-    gx = 100.0 * (k + gx);
 
-    for (i = 0; i < number_objective; i++)
-        obj[i] = 1.0 + gx;
 
-    for (i = 0; i < number_objective; i++)
+    for(i = 0; i < number_objective; i++)
     {
-        for (j = 0; j < number_objective - (i + 1); j++)
-            obj[i] *= cos(PI * 0.5 * xreal[j]);
-        if (i != 0)
+        obj[i] = 0.0;
+        double temp_sum=0;
+        for(j = 0; j < number_variable;j++)
         {
-            aux     = number_objective - (i + 1);
-            obj[i] *= sin(PI * 0.5 * xreal[aux]);
+            obj[i] += w_nap[i][j] *  p_nap[i][j] * xreal[j];
+            if(xreal[j]==1)
+               temp_sum += w_nap[i][j];
         }
+        if(temp_sum>capa[i])
+            obj[i]=0;
+
+
+
+
     }
-    for (i = 0; i < number_objective; i++)
+    for (i=2;i<number_objective;i++)
     {
-        obj[i] =  (-1) * obj[i];
+        obj[i] = 0.9 * obj[i] + 0.1 *obj[0];
+        i = i + 1;
     }
+    for (i=3;i < number_objective; i++)
+    {
+        obj[i] = 0.9 * obj[i] + 0.1 *obj[1];
+        i = i + 1;
+    }
+    for (i=0;i<number_objective;i++)
+    {
+        obj[i] = -1 * obj[i];
+
+    }
+
+
 }

@@ -1,10 +1,10 @@
-algorithm_name: RNSGA2GEN
-test_problem: ZDT1
+algorithm_name: NSGA2
+test_problem: KNAPSACK
 problem_param:
-number_variable 30
+number_variable 500
 number_objective 2
 popSize: 100
-max_evaluation: 20000
+max_evaluation: 25000
 runtime_output: 1
 output_interval: 10
 run_index_begin: 1

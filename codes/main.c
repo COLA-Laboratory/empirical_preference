@@ -56,6 +56,7 @@ double CR;                       // CR in DE
 double F;                        // F in DE
 double K;
 
+
 /* performance metrics */
 int PF_size;                 // size of the true Pareto-optimal Front
 double **PF_data;            // true Pareto-optimal front data
@@ -83,6 +84,11 @@ int analyse_list[BUFSIZE_S];
 FILE *pythonplot;
 pthread_t *plot_thread;
 double *reference_point, *weights_obj;
+
+/* parameters in knapsack problems */
+int **p_nap,**w_nap,*capa;
+
+
 
 int main(int argc, char *argv[])
 {
@@ -112,7 +118,20 @@ int main(int argc, char *argv[])
     double specificity = 0.1;     // parameter used in PBEA
     double sigma       = 0.2;     // parameter used in r-NSGA-II
     double epsilon     = 0.01;    // parameter used in R-NSGA-II
-    double radius      = 0.2;     // parameter used in R-MEAD2
+    double radius      = 2.0;     // parameter used in R-MEAD2
+
+    /* parameter settings for knapsack problems */
+    if (!strcmp(problem_name, "KNAPSACK"))
+    {
+        p_nap = (int **) malloc (number_objective * sizeof(int *));
+        for (i = 0; i < number_objective; i++)
+            p_nap[i] = (int *) malloc(number_variable * sizeof(int));
+        capa=(int *) malloc(number_objective * sizeof(int));
+        w_nap = (int **) malloc (number_objective * sizeof(int *));
+        for (i = 0; i < number_objective; i++)
+            w_nap[i] = (int *) malloc(number_variable * sizeof(int));
+
+    }
 
     // run experiments
     for (run_index = run_index_begin; run_index <= run_index_end; run_index++)

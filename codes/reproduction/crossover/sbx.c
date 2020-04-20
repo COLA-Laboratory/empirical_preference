@@ -36,67 +36,106 @@ void sbx_crossover (individual_real *parent1, individual_real *parent2, individu
     double c1, c2;
     double alpha, beta, betaq;
 
-    if (randomperc() <= pcross_real)
+    if (!strcmp(problem_name, "KNAPSACK"))
     {
-
-        for (i = 0; i < number_variable; i++)
+        int breakpoint;
+        if (randomperc() <= pcross_real)
         {
-            if (randomperc() <= 0.5)
+
+            breakpoint = rnd(0,number_variable-1);
+
+            for(i=0;i < breakpoint;i++)
             {
-                if (fabs (parent1->xreal[i]-parent2->xreal[i]) > 1e-9)
+                child1->xreal[i] = parent1->xreal[i];
+                child2->xreal[i] = parent2->xreal[i];
+            }
+            for(i=breakpoint;i < number_variable;i++)
+            {
+                child1->xreal[i] = parent2->xreal[i];
+                child2->xreal[i] = parent1->xreal[i];
+            }
+
+
+        }
+        else
+        {
+            for (i = 0; i < number_variable; i++)
+            {
+                child1->xreal[i] = parent1->xreal[i];
+                child2->xreal[i] = parent2->xreal[i];
+            }
+        }
+
+    }
+    else
+    {
+        if (randomperc() <= pcross_real)
+        {
+
+            for (i = 0; i < number_variable; i++)
+            {
+                if (randomperc() <= 0.5)
                 {
-                    if (parent1->xreal[i] < parent2->xreal[i])
+                    if (fabs (parent1->xreal[i]-parent2->xreal[i]) > 1e-9)
                     {
-                        y1 = parent1->xreal[i];
-                        y2 = parent2->xreal[i];
+                        if (parent1->xreal[i] < parent2->xreal[i])
+                        {
+                            y1 = parent1->xreal[i];
+                            y2 = parent2->xreal[i];
+                        }
+                        else
+                        {
+                            y1 = parent2->xreal[i];
+                            y2 = parent1->xreal[i];
+                        }
+                        yl    = variable_lowerbound[i];
+                        yu    = variable_upperbound[i];
+                        rand  = randomperc ();
+                        beta  = 1.0 + (2.0 * (y1 - yl) / (y2 - y1));
+                        alpha = 2.0 - pow (beta, -(eta_c + 1.0));
+                        if (rand <= (1.0 / alpha))
+                        {
+                            betaq = pow ((rand * alpha), (1.0 / (eta_c + 1.0)));
+                        }
+                        else
+                        {
+                            betaq = pow ((1.0 / (2.0 - rand * alpha)), (1.0 / (eta_c + 1.0)));
+                        }
+                        c1    = 0.5 * ((y1 + y2) - betaq * (y2 - y1));
+                        beta  = 1.0 + (2.0 * (yu - y2) / (y2 - y1));
+                        alpha = 2.0 - pow (beta, -(eta_c + 1.0));
+                        if (rand <= (1.0 / alpha))
+                        {
+                            betaq = pow ((rand * alpha), (1.0 / (eta_c + 1.0)));
+                        }
+                        else
+                        {
+                            betaq = pow ((1.0 / (2.0 - rand * alpha)), (1.0 / (eta_c + 1.0)));
+                        }
+                        c2 = 0.5 * ((y1 + y2) + betaq * (y2 - y1));
+                        if (c1 < yl)
+                            c1 = yl;
+                        if (c2 < yl)
+                            c2 = yl;
+                        if (c1 > yu)
+                            c1 = yu;
+                        if (c2 > yu)
+                            c2 = yu;
+                        if (randomperc () <= 0.5)
+                        {
+                            child1->xreal[i] = c2;
+                            child2->xreal[i] = c1;
+                        }
+                        else
+                        {
+                            child1->xreal[i] = c1;
+                            child2->xreal[i] = c2;
+                        }
                     }
                     else
                     {
-                        y1 = parent2->xreal[i];
-                        y2 = parent1->xreal[i];
-                    }
-                    yl    = variable_lowerbound[i];
-                    yu    = variable_upperbound[i];
-                    rand  = randomperc ();
-                    beta  = 1.0 + (2.0 * (y1 - yl) / (y2 - y1));
-                    alpha = 2.0 - pow (beta, -(eta_c + 1.0));
-                    if (rand <= (1.0 / alpha))
-                    {
-                        betaq = pow ((rand * alpha), (1.0 / (eta_c + 1.0)));
-                    }
-                    else
-                    {
-                        betaq = pow ((1.0 / (2.0 - rand * alpha)), (1.0 / (eta_c + 1.0)));
-                    }
-                    c1    = 0.5 * ((y1 + y2) - betaq * (y2 - y1));
-                    beta  = 1.0 + (2.0 * (yu - y2) / (y2 - y1));
-                    alpha = 2.0 - pow (beta, -(eta_c + 1.0));
-                    if (rand <= (1.0 / alpha))
-                    {
-                        betaq = pow ((rand * alpha), (1.0 / (eta_c + 1.0)));
-                    }
-                    else
-                    {
-                        betaq = pow ((1.0 / (2.0 - rand * alpha)), (1.0 / (eta_c + 1.0)));
-                    }
-                    c2 = 0.5 * ((y1 + y2) + betaq * (y2 - y1));
-                    if (c1 < yl)
-                        c1 = yl;
-                    if (c2 < yl)
-                        c2 = yl;
-                    if (c1 > yu)
-                        c1 = yu;
-                    if (c2 > yu)
-                        c2 = yu;
-                    if (randomperc () <= 0.5)
-                    {
-                        child1->xreal[i] = c2;
-                        child2->xreal[i] = c1;
-                    }
-                    else
-                    {
-                        child1->xreal[i] = c1;
-                        child2->xreal[i] = c2;
+                        child1->xreal[i] = parent1->xreal[i];
+                        child2->xreal[i] = parent2->xreal[i];
                     }
                 }
                 else
@@ -105,21 +144,19 @@ void sbx_crossover (individual_real *parent1, individual_real *parent2, individu
                     child2->xreal[i] = parent2->xreal[i];
                 }
             }
-            else
+        }
+        else
+        {
+            for (i = 0; i < number_variable; i++)
             {
                 child1->xreal[i] = parent1->xreal[i];
                 child2->xreal[i] = parent2->xreal[i];
             }
         }
+
     }
-    else
-    {
-        for (i = 0; i < number_variable; i++)
-        {
-            child1->xreal[i] = parent1->xreal[i];
-            child2->xreal[i] = parent2->xreal[i];
-        }
-    }
+
+
 
     return;
 }

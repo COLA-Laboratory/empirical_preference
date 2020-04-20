@@ -24,6 +24,8 @@
 
 # include "../header/problems.h"
 # include "../header/print.h"
+int **p_nap,**w_nap,*capa;
+
 
 void evaluate_population (population_real *pop)
 {
@@ -37,9 +39,90 @@ void evaluate_population (population_real *pop)
 
 void evaluate_individual (individual_real *ind)
 {
+    int i, j;
+
+    if (!strcmp(problem_name, "KNAPSACK"))
+    {
+
+        //weights
+        FILE *fp1;
+        if ((fp1 = fopen("data/w1.dat", "r")) == NULL) {
+            printf("file cannot open \n");
+            exit(0);
+        }
+
+        for (i = 0; i < number_variable; i++)
+            fscanf(fp1, "%d", &(w_nap[0][i]));
+        fclose(fp1);
+
+
+        FILE *fp2;
+        if ((fp2 = fopen("data/w2.dat", "r")) == NULL) {
+            printf("file cannot open \n");
+            exit(0);
+        }
+
+        for (i = 0; i < number_variable; i++)
+            fscanf(fp2, "%d", &(w_nap[1][i]));
+        fclose(fp2);
+
+//        FILE *fp23;
+//        if ((fp23 = fopen("data/w3.dat", "r")) == NULL) {
+//            printf("file cannot open \n");
+//            exit(0);
+//        }
+//
+//        for (i = 0; i < number_variable; i++)
+//            fscanf(fp23, "%d", &(w_nap[2][i]));
+//        fclose(fp23);
+
+
+
+        //value
+        FILE *fp3;
+        if ((fp3 = fopen("data/p1.dat", "r")) == NULL) {
+            printf("file cannot open \n");
+            exit(0);
+        }
+
+        for (i = 0; i < number_variable; i++)
+            fscanf(fp3, "%d", &(p_nap[0][i]));
+        fclose(fp3);
+        FILE *fp4;
+        if ((fp4 = fopen("data/p2.dat", "r")) == NULL) {
+            printf("file cannot open \n");
+            exit(0);
+        }
+
+        for (i = 0; i < number_variable; i++)
+            fscanf(fp4, "%d", &(p_nap[1][i]));
+        fclose(fp4);
+
+
+//        FILE *fp43;
+//        if ((fp43 = fopen("data/p3.dat", "r")) == NULL) {
+//            printf("file cannot open \n");
+//            exit(0);
+//        }
+//
+//        for (i = 0; i < number_variable; i++)
+//            fscanf(fp43, "%d", &(p_nap[2][i]));
+//        fclose(fp43);
+
+
+        for (i = 0; i < number_objective; i++)
+        {
+            capa[i]=0;
+            for (j = 0; j < number_variable; j++)
+                capa[i] += w_nap[i][j];
+            capa[i] =capa[i]/2;
+
+        }
+    }
     int flag;
 
     flag    = 0;
+    (strcmp (problem_name, "KNAPSACK")  != 0)? :(knapsack (ind), flag = 1);
     (strcmp (problem_name, "stock")  != 0)? :(stock (ind), flag = 1);
     (strcmp (problem_name, "ZDT1")  != 0)? :(zdt1 (ind), flag = 1);
     (strcmp (problem_name, "ZDT2")  != 0)? :(zdt2 (ind), flag = 1);
@@ -93,6 +176,7 @@ void evaluate_individual (individual_real *ind)
     (strcmp (problem_name, "C2DTLZ2")  != 0)? :(c2dtlz2 (ind), flag = 1);
     (strcmp (problem_name, "C3DTLZ1")  != 0)? :(c3dtlz1 (ind), flag = 1);
     (strcmp (problem_name, "C3DTLZ4")  != 0)? :(c3dtlz4 (ind), flag = 1);
+
 
     print_error (flag == 0, 2, "UNKNOWN test problem: ", problem_name);
 

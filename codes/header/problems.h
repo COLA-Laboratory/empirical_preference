@@ -53,6 +53,7 @@ void minus_dtlz1 (individual_real* ind);
 void minus_dtlz2 (individual_real* ind);
 void minus_dtlz3 (individual_real* ind);
 void minus_dtlz4 (individual_real* ind);
+void knapsack (individual_real *ind);
 void uf1 (individual_real* ind);
 void uf2 (individual_real* ind);
 void uf3 (individual_real* ind);

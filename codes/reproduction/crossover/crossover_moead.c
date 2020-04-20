@@ -27,13 +27,47 @@
 
 # include "../../header/reproduction.h"
 
+void sbx_mcrossover (individual_real *parent1, individual_real *parent2, individual_real *child1,int sub_problem_id)
+{
+    int i;
+
+    individual_real *child2;
+    int breakpoint;
+    child2 = child1;
+    if (randomperc() <= pcross_real) {
+
+        breakpoint = rnd(0,number_variable-1);
+
+        for(i=0;i < breakpoint;i++)
+        {
+            child1->xreal[i] = parent1->xreal[i];
+            child2->xreal[i] = parent2->xreal[i];
+        }
+        for(i=breakpoint;i < number_variable;i++)
+        {
+            child1->xreal[i] = parent2->xreal[i];
+            child2->xreal[i] = parent1->xreal[i];
+        }
+
+
+    }
+
+    return;
+}
+
 void crossover_moead_real (population_real *parent_pop, individual_real *offspring, int sub_problem_id, int *neighbor_type)
 {
     individual_real **parents = NULL;
     *neighbor_type = choose_neighbor_type ();
 
     parent_selection (parent_pop, &parents, sub_problem_id, *neighbor_type, 3);
-    de (parents, offspring);
+    if (!strcmp(problem_name, "KNAPSACK"))
+    {
+        sbx_mcrossover (parents[0], parents[1], offspring,sub_problem_id);
+
+    }
+    else
+        de (parents, offspring);
 
     free (parents);
 

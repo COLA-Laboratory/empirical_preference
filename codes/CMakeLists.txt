@@ -100,6 +100,7 @@ set(SOURCE_FILES
         testproblem/minusDTLZ/minusDTLZ2.c
         testproblem/minusDTLZ/minusDTLZ3.c
         testproblem/minusDTLZ/minusDTLZ4.c
+        testproblem/knapsack/knapsack.c
         testproblem/UF/UF1.c
         testproblem/UF/UF2.c
         testproblem/UF/UF3.c
