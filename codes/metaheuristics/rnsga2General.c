@@ -1,5 +1,5 @@
 /*
- * Rnsga2.c:
+ * Rnsga2General.c:
  *  This file implements the main procedures of general EMO with using R-NSGA-II as a general-purpose optimiser. It is based on the following reference:
  *
  *  K. Deb and J. Sundar. Reference point based multi-objective optimization using evolutionary algorithms. In

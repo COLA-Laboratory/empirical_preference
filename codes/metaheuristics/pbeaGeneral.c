@@ -1,6 +1,6 @@
 /*
- * pbea.c:
- *  This file contains the main procedures of PBEA. It is based on the following reference
+ * pbeaGeneral.c:
+ * This file implements the main procedures of general EMO with using PBEA as a general-purpose optimiser It is based on the following reference
  *
  *  L. Thiele et al., "A Preference-based Evolutionary Algorithm for Multi-objective Optimization.
  *  Evol. Comput., 17(3):411–436, 2009.
